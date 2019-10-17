@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
     const multimediaScript = document.createElement('script');
     multimediaScript.setAttribute('src','./js/multimedia.js');
     const buttonsContainer = document.querySelector('.buttons-wrap');
@@ -7,4 +7,4 @@ window.addEventListener('DOMContentLoaded', () => {
         '<button class="button">Нет</button>';
 
     document.querySelector('.multimedia').appendChild(multimediaScript);
-});
+// });
