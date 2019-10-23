@@ -3,10 +3,6 @@
 const output = document.querySelector('.modal__value');
 const rangeSLider = document.querySelector('.adjust-bar.adjust-bar_theme_temp');
 
-// rangeSLider.oninput = function() {
-//     output.innerHTML = this.value > 0 ? '+' + this.value : this.value;
-// }
-
 const arrowLeftDevs = document.querySelector('.devices__paginator .paginator__arrow_left');
 const arrowRightDevs = document.querySelector('.devices__paginator .paginator__arrow_right');
 const panelCountDevs = document.querySelectorAll('.devices__panel').length;
@@ -14,21 +10,28 @@ const devices = document.querySelector('.devices');
 const pagiantorDevs = document.querySelector('.devices__paginator');
 let currentPageDevs = 1;
 
-// pagiantorDevs.classList.toggle('paginator_hide', panelCountDevs < 7);
 
-$('.card').each(function(e) {
-    if ($(this).hasClass('card_size_s')) {
-        $(this).css({'border-radius': '22px'})
+// $('.card').each(function(e) {
+//     if ($(this).hasClass('card_size_s')) {
+//         $(this).css({'border-radius': '22px'})
+//     } else {
+//         $(this).css({'border-radius': '54px'})
+//     }
+// });
+
+[].slice.call(document.querySelectorAll('.card')).forEach(item => {
+    if(item.className.match('card_size_s')){
+        item.style.borderRadius = '22px';
     } else {
-        $(this).css({'border-radius': '54px'})
+        item.style.borderRadius = '23px';
     }
-});
+})
 
 
 let curValue;
 let curRotate;
-let maxRotate = 0.42; // 150 градусов
-let minRotate = -0.42; // -150 градусов
+let maxRotate = 0.42;
+let minRotate = -0.42;
 
 const MIN_VALUE = 26;
 const MAX_VALUE = 35;
@@ -38,10 +41,6 @@ const rotateToValue = function(rotate) {
     return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
 }
 
-
-/**
- * @param {Number} rotate Количество оборотов от нейтриального положения.
- */
 function setRotate(rotate) {
     if (rotate > maxRotate) {
         rotate = maxRotate;
@@ -175,16 +174,17 @@ document.querySelectorAll('.panel_floor').forEach(p => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    $('.card').each(function(e) {
-        if ($(this).hasClass('card_size_s')) {
-            $(this).css({'border-radius': '22px'})
+    [].slice.call(document.querySelectorAll('.card')).forEach(item => {
+        if(item.className.match('card_size_s')){
+            item.style.borderRadius = '22px';
         } else {
-            $(this).css({'border-radius': '23px'})
+            item.style.borderRadius = '23px';
         }
-    });
+    })
+
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
-    waterContainer.innerHTML = 
+    waterContainer.innerHTML =
                 '<div class="card-heading">' +
                     '<div class="card-icon-wrap">' +
                         '<img class="card-icon" src="img/kettle.svg">' +
@@ -266,12 +266,19 @@ var storage, initCriticalCam = function () {
     }), document.addEventListener("pointerup", e), g.addEventListener("onpointerup", e)
 };
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    var carousel = $("#carousel");
+//     var carousel = $("#carousel");
 
-    carousel.owlCarousel();
-});
+//     carousel.owlCarousel();
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+
+//     var carousel = document.querySelector("#carousel");
+
+//     carousel.owlCarousel();
+// });
 
 function status(e) {
     return 200 <= e.status && e.status < 300 ? Promise.resolve(e) : Promise.reject(new Error(e.statusText))
