@@ -19,9 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 '<div class="card-specs">' +
                     '<p class="card-source">Чайник</p>' +
                     '<p class="card-time card-time_block">16:20, Сегодня</p>' +
-                '</div>';
+                '</div>'
+
+});
 
 
+document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
     const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
     setTimeout(function() {
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonsContainer.style.display = "none";
         }
     }, 500)
+   
 
     document.getElementsByClassName("header-menu__switcher")[0].addEventListener("click", function () {
         document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")
