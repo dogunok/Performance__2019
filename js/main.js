@@ -67,13 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-const scenarios = document.querySelector('.scenarios');
-const pagiantorScens = document.querySelector('.scenarios__paginator');
-let currentPage = 1;
+// const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
+// const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
+// const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
+// const pageCountScens = document.querySelectorAll('.scenarios__page').length;
+// const scenarios = document.querySelector('.scenarios');
+// const pagiantorScens = document.querySelector('.scenarios__paginator');
+// let currentPage = 1;
 
 
 

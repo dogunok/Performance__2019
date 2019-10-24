@@ -315,7 +315,7 @@ footer {
 }
 
 .card {
-    background: url("../img/cbg.jpg");
+    background: url("./img/cbg.jpg");
     color: #333;
     border-radius: 20px;
     box-sizing: border-box;
@@ -704,7 +704,7 @@ html {
 }
 
 .description_critical {
-    background: url('../img/cbg.jpg');
+    background: url('./img/cbg.jpg');
     color: #000;
     border-radius: 20px;
     margin-top: -20px;
@@ -731,7 +731,7 @@ html {
     width: 100%;
     margin-top: 40px;
     display: block;
-    background: url(../img/cam2.jpg);
+    background: url(./img/cam2.jpg);
     border-radius: 20px;
     background-size: cover;
     background-position: 0 0;
@@ -923,7 +923,7 @@ html {
 }
 
 .video-volume {
-    background: url(../img/sound_n.png);
+    background: url(./img/sound_n.png);
     background-size: cover;
     height: 40px;
     width: 40px;
@@ -933,7 +933,7 @@ html {
 
 .video-volume_unmuted {
     background: green;
-    background: url(../img/sound.png);
+    background: url(./img/sound.png);
     background-size: cover
 }
 
